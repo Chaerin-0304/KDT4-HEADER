@@ -1,0 +1,122 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* common */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul ol {
+    list-style: none;
+}
+
+.btn {
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #dbdbdb;
+    margin-left: 0.5rem;
+}
+
+.btn-whithe{
+    color: #4a4a4a;
+    background-color: #fff;
+}
+.btn-red{
+    color:#fff;
+    background-color: #ff7867;
+}
+/* HEADER start */
+
+header {
+    height:65px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 hsla(0,0%,80.8%,.5);
+
+}
+header .inner{
+    /* 줄어들어도 가로 스크롤이 안생기도록 줄어들면 부모의 넓이에 따라 줄어듬 */
+    max-width: 1200px;
+    /* header의 높이를 가져오는 것 */
+    height: 100%;
+    /* width가 지정돼 있을 경우 사용 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+/* header-menu left */
+header .inner .menu-left{
+    display: flex;
+}
+header .inner .menu-left .logo{
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+header .inner .menu-left .logo a{
+    color :#1dc078;
+}
+header .inner .menu-left .logo a i{
+    /* 나뭇잎 크기를 키우는 것 폰트사이즈로 키우기 */
+    font-size: 20px;
+}
+header .inner .menu-left .menu{
+    display: flex;
+}
+header .inner .menu-left .menu li{
+    list-style: none;
+}
+header .inner .menu-left .menu li a{
+    color: #4a4a4a;
+    padding:1rem;
+    text-shadow: 1px 1px 10px #4a4a4a11;
+}
+
+header .inner .menu-left .menu li a:hover {
+    color:#1dc078;
+}
+
+header .inner .menu-right {
+    display:flex;
+    align-items: center;
+}
+header .inner .menu-right .header_search{
+    position: relative;
+}
+header .inner .menu-right .header_search input{
+    width: 150px;
+    height: 40px;
+    border: 0.5px solid transparent;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    color: #363636;
+
+}
+header .inner .menu-right .header_search input:hover{
+    border-color: #dbdbdb;
+}
+header .inner .menu-right .header_search input:focus{
+    outline-color: #1dc078;
+}
+
+header .inner .menu-right .header_search i{
+    /* 기준점으로 삼고싶은 div position에 relative 처리 */
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    /* top:0 bottom:0 margin:auto 하려면 높이값이 주어져야 함 */
+    /* 높이값 없을 때 가운데 정렬 하는 방법 */
+    top:50%;
+    transform: translateY(-50%);
+}
